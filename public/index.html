@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Thermostat</title>
+    <script src='js/jquery-1.12.3.js'></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <section>
+    <h1 id="temperature">Thermometer</h1>
+    <div id="left">
+      <button id="temperature-up" class ="button">+</button><br>
+      <button id="temperature-down" class="button">-</button><br>
+      <button id="temperature-reset" class="button">reset</button><br>
+      <button id="powersaving-on" class="button">PSM on</button><br>
+      <button id="powersaving-off" class = "button">PSM off</button><br>
+    </div>
+    <div id="right"> 
+      <div id="top">
+        <p>
+          Temperature <span id='temp'></span><br> <br>
+          PowerSave <span id="psave">ON</span>
+        </p>
+      </div>
+      <div id="bottom">
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <input id="submit" type="submit"></input>
+        </form>
+        
+        Current Temperature Outside: <strong id='outside-temp'></strong><br>
+      </div>
+    </div> 
+    <div id="clear"></div> 
+    </section>
+
+    <script src="js/Thermostat.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/client.js"></script>
+  </body>
+
+</html>
